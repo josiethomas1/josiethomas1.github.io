@@ -3,11 +3,58 @@ body {
     background-repeat:no-repeat;
     background-size:cover;
     height: 100vh;
-    width: 100vw;
-    
+    width: 100vw;    
+
 }
+
 #parentbox{
-    border: 2px solid red;
-    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 5px solid red;
+    border-top: 10px fill red;
+    background-color: white; 
+    opacity: 85%;
+    width: 350px;
     height: 50px;
+    padding: 1em;
+    font-size: 1em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    align-items: center;
+    justify-content: center;
 }
+
+.corner-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 3px;
+    background-color: red;
+    border-color: white;
+    padding: 20px;
+    color: black;
+  }
+  
+  .corner-box p {
+    margin: 0;
+    text-align: center;
+}
+
+.corner-box2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 5px;
+    padding: 20px;
+    font-size: 1.25em;
+    opacity: 75%;
+    color: white;
+}
+
+ .corner-box2 p {
+    margin: 0;
+    text-align: center;
+ }
+ 
