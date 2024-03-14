@@ -1,0 +1,13 @@
+body {
+    background-image: url('geometric-background.png');
+}
+
+h2 {
+    color: black;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
