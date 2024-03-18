@@ -1,13 +1,19 @@
 body {
-    background-image: url('geometric-background.png');
+    background-image: url(../img/coloradosymphony.png);
 }
 
 h2 {
     color: black;
+    text-decoration: underline; 
 }
 
-footer a {
+footer {
     color: white;
+    transition: color 0.3s ease;
     text-decoration: none;
     margin: 0 5px;
+}
+
+footer:hover{
+    color: black;
 }
