@@ -35,4 +35,6 @@ function displayQuote(quote) {
     quoteText.textContent = quote;
 }
 
+
+
 getQuote();
