@@ -1,26 +1,27 @@
 body {
     font-family:'Courier New', monospace;
-    background-color: white;
+    background-image: url(../img/sunsetcloud.jpeg);
+    background-size: fill;
+    background-position: center;
     margin: 0;
     padding: 0;
 }
 
 .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    margin-top: 100px;
 }
 
 h1 {
-    color: black;
-}
-
-h2 {
-    color: black;
+    color:rgb(42, 72, 99);
 }
 
 .activity {
     font-size: 24px;
-    color: black;
+    color: rgb(42, 72, 99);
     margin-bottom: 20px;
 }
 
@@ -36,5 +37,7 @@ h2 {
 }
 
 .btn:hover {
-    background-color: rgb(161, 203, 218);
+    background-color:rgb(61, 118, 168);
 }
+
+
