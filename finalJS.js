@@ -1,30 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const volumeIndicator = document.getElementById("volumeIndicator");
-    const volumeBar = document.getElementById("volumeBar");
-    const volumeUpButton = document.getElementById("volumeUpButton");
-    const volumeDownButton = document.getElementById("volumeDownButton");
-    let volumeLevel = 50;
+    const volumeSlider = document.getElementById("volumeSlider");
+    const changeVolumeButton = document.getElementById("changeVolumeButton");
+    const volumeNumber = document.getElementById("volumeNumber");
   
-    function updateVolumeIndicator() {
-      volumeIndicator.style.height = volumeLevel + "%"; // This function adjusts the visual representation of volume
-      volumeBar.style.height = (100 - volumeLevel) + "%";
-    }
+    volumeSlider.addEventListener("input", function () {
+      changeBackgroundColor();
+      updateVolumeNumber();
+    });
   
-    function increaseVolume() {
-      if (volumeLevel > 0) {
-        volumeLevel -= 10;
-        updateVolumeIndicator();
-      }
+    changeVolumeButton.addEventListener("click", function () {
+      decreaseVolume();
+      animateButton();
+    });
+  
+    function changeBackgroundColor() {
+      const volume = volumeSlider.value;
+      const red = Math.round((255 * volume) / 100);
+      const green = Math.round((255 * (100 - volume)) / 100);
+      document.body.style.backgroundColor = `rgb(${red}, ${green}, 0)`;
     }
   
     function decreaseVolume() {
-      if (volumeLevel < 100) {
-        volumeLevel += 10;
-        updateVolumeIndicator();
+      if (volumeSlider.value > 0) {
+        volumeSlider.value -= 10;
+        changeBackgroundColor();
+        updateVolumeNumber();
       }
     }
   
-    volumeUpButton.addEventListener("click", decreaseVolume);
-    volumeDownButton.addEventListener("click", increaseVolume);
+    function animateButton() {
+      const maxOffset = 10;
+      let currentOffset = 0;
+      const interval = setInterval(() => {
+        changeVolumeButton.style.transform = `translateX(${currentOffset}px)`;
+        currentOffset = -currentOffset;
+        if (currentOffset >= maxOffset) {
+          clearInterval(interval);
+        }
+      }, 50);
+    }
+  
+    function updateVolumeNumber() {
+      volumeNumber.textContent = volumeSlider.value;
+    }
   });
   

@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Final: Annoying Volume Control</title>
-    <link rel="stylesheet" href="finalJS.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annoying Volume Control</title>
+<link rel="stylesheet" href="finalJS.css">
 </head>
 <body>
-    <div id="volumeContainer">
-        <div id="volumeIndicator"></div>
-        <div id="volumeBar"></div>
-        <div id="volumeButtons">
-          <button id="volumeUpButton">Volume Up</button>
-          <button id="volumeDownButton">Volume Down</button>
-        </div>
-      </div>      
-    <script src="finalJS.js"></script>
+<div id="volumeControl">
+  <input type="range" id="volumeSlider" min="0" max="100" value="50">
+  <div id="volumeNumber">50</div>
+  <button id="changeVolumeButton">Increase Volume</button>
+</div>
+<script src="finalJS.js"></script>
 </body>
 </html>

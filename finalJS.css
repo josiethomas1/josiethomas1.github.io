@@ -1,47 +1,30 @@
-#volumeContainer {
-  width: 250px;
-  height: 350px;
-  background-color: grey;
+body {
+  margin: 0;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  border-radius: 10px;
+  transition: background-color 0.5s;
 }
 
-#volumeIndicator {
-  width: 50px;
-  height: 50%;
-  background-color: lightgreen;
-  border-radius: 5px;
-  transition: height 0.3s ease-in-out;
+#volumeControl {
+  width: 300px;
 }
 
-#volumeBar {
-  width: 20px;
-  height: 100%;
-  background-color: #ccc;
-  border-radius: 5px;
+#volumeSlider,
+#changeVolumeButton {
+  margin: 10px 0;
 }
 
-#volumeButtons {
-  display: flex;
-  flex-direction: column;
-}
-
-button {
-  width: 80px;
+#changeVolumeButton {
   padding: 10px;
-  margin: 5px;
   font-size: 16px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: lightblue;
+  border: none;
+  background-color: #007bff;
   color: white;
 }
 
+#changeVolumeButton:hover {
+  background-color: #0056b3;
+}
