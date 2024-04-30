@@ -38,7 +38,7 @@ console.log(total);
 
 function raise() {
     for (x in company.employees.employees) {
-        if (company.employees.emplpyees[x].raiseEligible == true) {
+        if (company.employees.employees[x].raiseEligible == true) {
             company.employees.employees[x].salary = company.employees.employees[x] * 1.1;
             company.employees.employees[x].raiseEligible = false;
         }
