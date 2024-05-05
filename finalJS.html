@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Annoying Volume Control</title>
-<link rel="stylesheet" href="finalJS.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annoying Volume Control Game</title>
+  <link rel="stylesheet" href="finalJS.css">
 </head>
 <body>
-<div id="volumeControl">
-  <input type="range" id="volumeSlider" min="0" max="100" value="50">
-  <div id="volumeNumber">50</div>
-  <button id="changeVolumeButton">Increase Volume</button>
-</div>
-<script src="finalJS.js"></script>
+  <div id="game-container">
+    <div id="cards-container">
+      <div class="card" id="card1"></div>
+      <div class="card" id="card2"></div>
+      <div class="card" id="card3"></div>
+      <div class="card" id="card4"></div>
+    </div>
+    <div id="game-overlay">
+      <h2> ♣♦♥♠ PICK A CARD, ANY CARD ♠♥♦♣ </h2>
+      <button id="reset-button">Reset Game</button>
+    </div>
+  </div>
+
+  <script src="finalJS.js"></script>
 </body>
 </html>
+
